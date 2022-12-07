@@ -11,6 +11,8 @@ public class UnifyFile : MonoBehaviour
     public GameObject Canvas;
     public GameObject addBox;
 
+    public GameObject commitBox;
+
     public GameObject prefabObj;
 
     DateTime dt;
@@ -25,8 +27,9 @@ public class UnifyFile : MonoBehaviour
 
     public void OnClick()
     {
-        //addBox.SetActive(false);
+        
         Canvas.SetActive(false);
+        commitBox.SetActive(true);
 
         foreach (GameObject file in FileDataBase.instance.addfileList)
         {
@@ -47,6 +50,7 @@ public class UnifyFile : MonoBehaviour
 
         // プレハブを元にオブジェクトを生成する
         GameObject obj = Instantiate(prefabObj, new Vector3(-19.0f, 1.0f, -10.0f), Quaternion.Euler(0, 0, 0));
+        obj.name = "commitfile";
         obj.GetComponent<Text>().text = time + "\n" +
                                         "create Attack.cs\n" +
                                         "create Hero.cs";

@@ -63,6 +63,11 @@ public class Add : MonoBehaviour
         AttackBool();
         HeroBool();
 
+        if (attack == false || hero == false)
+        {
+            Canvas.SetActive(false);
+        }
+
     }
 
     void AttackBool()
