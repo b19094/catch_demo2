@@ -35,6 +35,8 @@ public class Commit : MonoBehaviour
             entry.eventID = EventTriggerType.PointerClick;
             entry.callback.AddListener((eventDate) => { point.OnPointerClick(); });
             trigger.triggers.Add(entry);
+
+            FileDataBase.instance.commitfileList.Add(collision.gameObject);
         }
         
     }

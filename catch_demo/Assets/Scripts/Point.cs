@@ -20,12 +20,6 @@ namespace point {
             obj = this.gameObject;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
         public void OnPointerClick()
         {
             info.GetComponent<Text>().text = obj.GetComponent<Text>().text;

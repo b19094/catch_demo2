@@ -6,6 +6,9 @@ public class FileDataBase : MonoBehaviour
 {
     static public FileDataBase instance;
     public List<GameObject> addfileList = new List<GameObject>();
+    public List<GameObject> commitfileList = new List<GameObject>();
+
+    public GameObject firstFile;
 
     private void Awake()
     {
@@ -13,6 +16,8 @@ public class FileDataBase : MonoBehaviour
         {
             instance = this;
         }
+
+        commitfileList.Add(firstFile);
     }
 
     // Start is called before the first frame update
