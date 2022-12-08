@@ -16,11 +16,6 @@ public class CreateFile : MonoBehaviour
     int t = 0;
 
 
-    public List<GameObject> list_cloneFile_ = new List<GameObject>();
-
-    List<string> fileList = new List<string>();
-
-
     // 初期化
     void Start()
     {

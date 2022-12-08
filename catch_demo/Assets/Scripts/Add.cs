@@ -29,10 +29,12 @@ public class Add : MonoBehaviour
         if(fileName == "Attack.cs")
         {
             attack = true;
+            FileDataBase.instance.addfileList.Add(collision.gameObject);
         }
         if (fileName == "Hero.cs")
         {
             hero = true;
+            FileDataBase.instance.addfileList.Add(collision.gameObject);
         }
 
         AttackBool();
@@ -60,6 +62,11 @@ public class Add : MonoBehaviour
 
         AttackBool();
         HeroBool();
+
+        if (attack == false || hero == false)
+        {
+            Canvas.SetActive(false);
+        }
 
     }
 
