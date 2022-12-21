@@ -9,6 +9,8 @@ public class EntryTree : MonoBehaviour
     public GameObject master;
     public GameObject Canvas;
     public GameObject Box;
+    public GameObject PushCanvas;
+    public GameObject Tree;
 
     int x = -5;
     int cnt = 0;
@@ -21,6 +23,9 @@ public class EntryTree : MonoBehaviour
 
     public void OnClick()
     {
+        // ツリーを元にオブジェクトを生成する
+        GameObject obj = Instantiate(Tree, Tree.transform.position + new Vector3(0.0f, 0.0f, -10.0f), Tree.transform.rotation);
+
         linerend = master.gameObject.GetComponent<LineRenderer>();
 
         cnt = FileDataBase.instance.commitfileList.Count - 1;
@@ -44,5 +49,6 @@ public class EntryTree : MonoBehaviour
 
         Canvas.SetActive(false);
         Box.SetActive(false);
+        PushCanvas.SetActive(true);
     }
 }

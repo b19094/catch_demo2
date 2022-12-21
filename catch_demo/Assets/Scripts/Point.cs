@@ -13,6 +13,7 @@ namespace point {
         // Start is called before the first frame update
         void Start()
         {
+            //親オブジェクトを指定できるようにする
             GameObject tree = GameObject.Find("Tree");
             GameObject canvas = tree.transform.Find("information").gameObject;
             info = canvas.transform.Find("Text").gameObject;
